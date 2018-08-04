@@ -1,0 +1,40 @@
+<import src="../template-star/star.wxml" />
+<view class="container">
+  <!-- <swiper class='swiper' autoplay='true' indicator-dots="true" circular="true" indicator-color="#eee">
+     <swiper-item wx:for="{{swiperImg}}">
+      <image src='{{item}}'></image>
+    </swiper-item> 
+  </swiper> -->
+  <view class="search">
+    <input class="book-search" placeholder="{{placeholder}}" value="{{msg}}" bindinput="bookInput" type="text" />
+    <image bindtap="bookSearch" src="/images/icon/search.png"></image>
+  </view>
+  <scroll-view scroll-y class='scroll'>
+    <view class='content'>
+      <view class='item' wx:for="{{dataList}}" data-id="{{item.id}}" data-author="{{item.write}}" data-title="{{item.title}}" data-cover="{{item.cover}} " bindtap='detail'>
+        <!-- 标题 -->
+        <view class='title'>
+          <view class='cover'>
+            <image src='{{item.cover}}'></image>
+          </view>
+          <view class='text'>
+            <text class='name'>{{item.title}}</text>
+            <view class='star'>
+              <view wx:for="{{item.star}}">
+                <template is="stars" data="{{item}}"></template>
+              </view>
+              <text class='score'>{{item.rating}}分</text>
+            </view>
+            <text class='class'>{{item.bookType}}</text>
+            <text class='author'>{{item.write}}</text>
+          </view>
+        </view>
+        <!-- 描述 -->
+        <view class='dec'>
+          <view class='txt'>{{item.abstract}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view> 
+  
+</view>

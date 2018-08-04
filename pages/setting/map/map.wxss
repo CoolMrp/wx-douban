@@ -1,0 +1,5 @@
+/* pages/setting/map/map.wxss */
+#myMap{
+  width: 100vh;
+  height: 100vh;
+}

@@ -1,0 +1,130 @@
+/* pages/book/book.wxss */
+page{
+  width: 100%;
+  height:100%;
+}
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search {
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  background: #389;
+}
+
+.search .book-search {
+  position: relative;
+  width: 80%;
+  height: 60%;
+  border-radius: 20rpx;
+  background:#fff;
+  box-shadow: 0 0 10rpx #222;
+  padding-left: 30rpx;
+}
+
+.search image {
+  position: absolute;
+  right: 90rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+/* .container swiper{
+  width: 100%;
+  height: 35%;
+}
+.container swiper swiper-item{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.container .swiper swiper-item image{
+  width:100%;
+  height: 100%;
+} */
+
+/* content */
+.scroll{
+  position: absolute;
+  top:8vh;
+}
+.content{
+  width: 100%;
+  height: 92vh;
+} 
+.content .item{
+  width: 100%;
+  height: 400rpx;
+  margin-bottom:10rpx;
+  box-shadow: 0 2px 5px #000;
+  background: #389;
+  color:#fff;
+}
+.content .item .title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 200rpx;
+  padding: 10rpx 0;
+}
+.content .item .title .cover{
+  width: 20%;
+  height: 200rpx;
+  box-shadow: 0 0 5px #fff;
+}
+.content .item .title .cover image{
+  width:100%;
+  height:100%;
+}
+.content .item .title .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 75%;
+  height: 100%;
+  font-size: 14px;
+}
+.content .item .title .text .name{
+  font-size: 18px;
+  letter-spacing: 10rpx;
+  font-family: "微软雅黑";
+  font-weight: bold;
+}
+.content .item .title .text .star{
+  display: flex;
+  flex-direction: row;
+  width: 200rpx;
+  height: 30rpx;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 30rpx;
+}
+.content .item .title .text .star image{
+  width: 25rpx;
+  height: 25rpx;
+}
+.content .item .dec{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 160rpx;
+  padding: 10rpx 10rpx;
+  font-size: 16px;
+  font-family: "楷体";
+  letter-spacing: 5rpx;
+  line-height: 20px;
+}
+.content .item .dec .txt{
+  overflow: hidden;
+}

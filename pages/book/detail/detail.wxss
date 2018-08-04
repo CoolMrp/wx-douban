@@ -1,0 +1,164 @@
+@import"../../template-star/star.wxss";
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+}
+.container .top{
+  position: relative;
+  width: 100%;
+  height: 360rpx;
+  background: lightblue;
+  font-size: 16px;
+}
+.top .cover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.top .cover image{
+  width: 100%;
+  height: 100%;
+  filter: blur(10rpx);
+}
+.top .msg{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 5%;
+  top: 10%;
+  width: 90%;
+  height: 80%;
+  font-family: "楷体";
+  line-height: 20px;
+  color: #888;
+}
+.top .msg .price .red{
+  color:red;
+}
+.top .msg .name{
+  font-size: 24px;
+  color: #368;
+  letter-spacing: 6rpx;
+  line-height: 28px;
+}
+.top .bookImg{
+  position: absolute;
+  z-index: 100;
+  bottom: -22%;
+  right:5%;
+  width: 180rpx;
+  height: 240rpx;
+  box-shadow: 0 0 10rpx #000;
+}
+.top .bookImg image{
+  width: 100%;
+  height: 100%;
+}
+.top .detail-bar{
+  position: absolute;
+  top:360rpx;
+  width: 95%;
+  height: 160rpx;
+  padding:5px 10px;
+  background: #ccc;
+}
+.top .detail-bar .author{
+  display: block;
+  width: 100%;
+  height: 40%;
+  font-size: 18px;
+  line-height: 64rpx;
+  font-weight: bold;
+}
+.top .detail-bar .rating{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: 60%;
+}
+.top .detail-bar .rating .score{
+  width: 100rpx;
+  height: 100%;
+  font-size: 30px;
+  line-height: 96rpx;
+}
+.top .detail-bar .rating .star-box{
+  width: 200rpx;
+  height: 100%;
+}
+.top .detail-bar .rating .star-box .stars{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+.top .detail-bar .rating .star-box .ratNum{
+  display: block;
+  width: 100%;
+  height: 50%;
+  margin-right:10px;
+  font-size: 14px;
+  color: #888;
+  line-height: 48rpx;
+}
+.top .detail-bar .btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  right:10px;
+  bottom: 8px;
+  width: 350rpx;
+  height: 30%;
+}  
+.top .detail-bar .btn view{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+ .top .detail-bar .btn view image{
+   width: 40rpx;
+   height: 40rpx;
+   margin-right: 10rpx;
+ } 
+/* 
+.top .detail-bar .btn button{
+  display: inline-block;
+  width: 139rpx;
+  height: 70rpx;
+  font-size: 12px;
+  line-height: 70rpx;
+} */
+
+.container .abstract-box{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-content: center;
+  position: absolute;
+  top: 560rpx;
+  width: 100%;
+  height: 600rpx;
+}
+.container .abstract-box .abstract{
+  width:92%;
+  padding: 30rpx;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "楷体";
+  color: lightslategray;
+  text-indent: 2em;
+}

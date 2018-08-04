@@ -1,0 +1,54 @@
+<import src="../../template-star/star.wxml" />
+<view class='container'>
+  <view class='top'>
+    <view class='cover'>
+      <image src='{{bookMsg[0].cover}}'></image>
+    </view>
+    <view class='msg'>
+     <view class='name'>{{bookMsg[0].title?bookMsg[0].title:"暂无数据"}}</view>
+     <view class='publish'>出版社:{{bookMsg[0].publish?bookMsg[0].publish:"暂无数据"}}/{{bookMsg[0].pressDate}}</view>
+     <view class='page'>总页数：{{bookMsg[0].page?bookMsg[0].page:"暂无数据"}}</view>
+     <view class='commentCount'>总评论数：{{bookMsg[0].commentCount?bookMsg[0].commentCount:"暂无数据"}}</view>
+     <view class='ratingCount'>总评分次数：{{bookMsg[0].ratingCount?bookMsg[0].ratingCount:"暂无数据"}}</view>
+     <view class='price'>价格：<text class='red'>{{bookMsg[0].price?bookMsg[0].price+"￥":"暂无数据"}}</text></view>
+    </view>
+    <view class='bookImg'>
+      <image src='{{bookMsg[0].cover}}'></image>
+    </view>
+    <view class='detail-bar'>
+      <text class='author'>作者：【{{bookMsg[0].author}}】</text>
+      <view class='rating'>
+        <view class='score'>{{bookMsg[0].rating}}</view>
+        <view class='star-box'>
+          <view class='stars'>
+            <template wx:for="{{bookMsg[0].star}}" is="stars" data="{{item}}"></template>
+          </view>
+           <text class='ratNum'>{{bookMsg[0].ratingCount}}人评价</text>
+        </view>
+      </view>
+      <view class='btn'>
+        <view class='comments' bindtap='onComments'>
+          <image src='/images/icon/wx_app_message.png'></image>
+          <text>{{bookCommentsNum}}</text>
+        </view>
+        <view class='collect' bindtap='onCollect'>
+          <image wx:if="{{!bookCollectStatus}}" src='/images/icon/wx_app_collect.png'></image>
+          <image wx:else src='/images/icon/wx_app_collected.png'></image>
+          <text>{{bookCollectNum}}</text>
+        </view>
+        <view class='love' bindtap='onLove'>
+          <image wx:if="{{!bookUpStatus}}" src='/images/icon/wx_app_like.png'></image>
+          <image wx:else src='/images/icon/wx_app_liked.png'></image>
+          <text>{{bookUpNum}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+   <!-- <view class='abstract-box'>  -->
+    <scroll-view scroll-y class='abstract-box'>
+      <view class='abstract'>
+        {{bookMsg[0].abstract}}
+      </view>
+    </scroll-view>
+   <!-- </view>  -->
+</view>

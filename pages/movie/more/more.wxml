@@ -1,0 +1,11 @@
+<import src='../../template-star/star.wxml' />
+<scroll-view scroll-y class='container'>
+  <view class="movie-item flex column space-around" wx:for="{{movieData}}">
+    <image mode="aspectFill" class='item-pic' src="{{item.images}}"></image>
+    <text class='item-title'>{{item.title}}</text>
+    <view class="flex row flex-start item-star">
+      <template wx:for="{{item.star}}" is='stars' data="{{item}}"></template>
+      <view>{{item.score}}分</view>
+    </view>
+  </view>
+</scroll-view>

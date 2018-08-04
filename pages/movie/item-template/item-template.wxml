@@ -1,0 +1,12 @@
+<import src='../../template-star/star.wxml' />
+
+<template name='movie-item'>
+<view class="movie-item flex column space-between">
+  <image mode="aspectFill" class='item-pic' src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2485983612.jpg"></image>
+  <text class='item-title'>{{title}}</text>
+  <view class="flex row flex-start item-star">
+    <template wx:for="{{[1,1,1,1,0.5]}}" is='stars' data="{{item}}"></template>
+    <view>9分</view>
+  </view>
+</view>
+</template>

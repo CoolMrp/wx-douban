@@ -1,0 +1,5 @@
+<template name="stars">
+  <image wx:if="{{item===1}}" src='/images/icon/wx_app_star.png' class='star'></image>
+  <image wx:elif="{{item===0.5}}" src='/images/icon/wx_app_star@half.png' class='star'></image>
+  <image wx:else="{{item===0}}" src='/images/icon/wx_app_star@none.png' class='star'></image>
+</template>

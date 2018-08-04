@@ -1,0 +1,65 @@
+<import src='./list-template/list-template.wxml' />
+<import src='../template-star/star.wxml' />
+<view class="container flex column flex-start center">
+  <!-- <view class="search">
+    <input class="book-search" placeholder="{{placeholder}}" value="{{msg}}" bindinput="bookInput" type="text" />
+    <image bindtap="bookSearch" src="/images/icon/search.png"></image>
+  </view> -->
+  <!-- <block wx:for="{{movieData}}" wx:for-item="item">
+    <template is='movie-list' data="{{...item}}"></template>
+  </block> -->
+  <view class="movie-list flex column space-between center" wx:for="{{[1]}}">
+    <view class="list-title flex row space-between center">
+      <text>{{subjects[0][0].type}}</text>
+      <text bindtap='toMore' data-type="{{subjects[0][0].type}}">更多 ></text>
+    </view>
+    <view class="list-items flex row space-around center">
+      <!-- <template is='movie-item' data="{{...item}}"></template> -->
+      <view class="movie-item flex column space-between" wx:for="{{subjects[0]}}">
+        <image mode="aspectFill" class='item-pic' src="{{item.images}}"></image>
+        <text class='item-title'>{{item.title}}</text>
+        <view class="flex row flex-start item-star">
+          <template wx:for="{{item.star}}" is='stars' data="{{item}}"></template>
+          <view>{{item.score}}分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="movie-list flex column space-between center" wx:for="{{[1]}}">
+    <view class="list-title flex row space-between center">
+      <text>{{subjects[1][0].type}}</text>
+      <text bindtap='toMore' data-type="{{subjects[1][0].type}}">更多 ></text>
+    </view>
+    <view class="list-items flex row space-around center">
+      <!-- <template is='movie-item' data="{{...item}}"></template> -->
+      <view class="movie-item flex column space-between" wx:for="{{subjects[1]}}">
+        <image mode="aspectFill" class='item-pic' src="{{item.images}}"></image>
+        <text class='item-title'>{{item.title}}</text>
+        <view class="flex row flex-start item-star">
+          <template wx:for="{{item.star}}" is='stars' data="{{item}}"></template>
+          <view>{{item.score}}分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="movie-list flex column space-between center" wx:for="{{[1]}}">
+    <view class="list-title flex row space-between center">
+      <text>{{subjects[2][0].type}}</text>
+      <text bindtap='toMore' data-type="{{subjects[2][0].type}}">更多 ></text>
+    </view>
+    <view class="list-items flex row space-around center">
+      <!-- <template is='movie-item' data="{{...item}}"></template> -->
+      <view class="movie-item flex column space-between" wx:for="{{subjects[2]}}">
+        <image mode="aspectFill" class='item-pic' src="{{item.images}}"></image>
+        <text class='item-title'>{{item.title}}</text>
+        <view class="flex row flex-start item-star">
+          <template wx:for="{{item.star}}" is='stars' data="{{item}}"></template>
+          <view>{{item.score}}分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

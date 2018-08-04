@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="user">
+    <image src="{{userInfo.avatar}}"></image>
+    <view class="title">
+      <text>昵称:{{userInfo.nickName}}</text>
+       <text>性别:{{userInfo.sex =='1'?'男':'女'}}</text>
+        <text>地址:{{userInfo.city}}</text>
+    </view>
+  </view>
+  <block>
+  <view wx:for="{{Data}}" class="map line" bindtap="{{item.bindEvent}}">
+    <image src="{{item.imgUrl}}"></image>
+    <text>{{item.text}}</text>
+  </view>
+  </block>
+  <view wx:if="{{sysShow}}" class="systemInfo flex column">
+    <text>设备型号:{{systemInfo.model}}</text>
+    <text>设备宽度 :{{systemInfo.screenHeight}}</text>
+    <text>设备高度:{{systemInfo.screenWidth}}</text>
+    <text>操作系统:{{systemInfo.system}}</text>
+    <text>系统版本:{{systemInfo.version}}</text>
+  </view>
+  <button open-type="share" type="primary">分享页面</button>
+</view>

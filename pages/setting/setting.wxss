@@ -1,0 +1,99 @@
+/* pages/setting/setting.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #e1e1e1;
+  font-family: '楷体';
+  font-size: 44rpx;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 5%;
+  width: 90%;
+  height: 300rpx;
+  background: #fff;
+  box-shadow: 0 10px 10px #ccc;
+  margin-bottom: 20rpx;
+}
+
+.user image {
+  width: 200rpx;
+  height: 200rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 0 8px #222;
+}
+
+.user .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 300rpx;
+  height: 230rpx;
+  padding-left: 40rpx;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  margin: 10rpx 0 20rpx 0;
+  background: #fff;
+  font-size:32rpx;
+  box-shadow: 0 10px 10px #ccc;
+  
+}
+
+.line image {
+  position:relative;
+  margin: 0 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.line:after{
+  position:absolute;
+  right:40rpx;
+  content:'>';
+  width:40rpx;
+  height:40rpx;
+  font-weight: bold;
+  color:#ccc;
+}
+
+.systemInfo{
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  margin:auto;
+  width:500rpx;
+  height:500rpx;
+  padding:20rpx;
+  background:#fff;
+  font-size:16px;
+  border-radius:10rpx;
+  box-shadow:0 0 5px #222;
+}
+.systemInfo text{
+  width:100%;
+  line-height:25px;
+}
+button{
+  width:100%;
+  margin-top:10rpx;
+  line-height: 80rpx;
+}

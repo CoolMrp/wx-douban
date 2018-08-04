@@ -1,0 +1,23 @@
+<import src='../item-template/item-template.wxml' />
+
+<template name='movie-list'>
+  <view class="movie-list flex column space-between center">
+    <view class="list-title flex row space-between center">
+      <text>{{title}}</text>
+      <text>更多 ></text>
+    </view>
+    <view class="list-items flex row space-around center">
+      <block wx:for="{{[1,2,3]}}" wx:for-item="item">
+        <!-- <template is='movie-item' data="{{...item}}"></template> -->
+        <view class="movie-item flex column space-between">
+          <image mode="aspectFill" class='item-pic' src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2485983612.jpg"></image>
+          <text class='item-title'>{{}}</text>
+          <view class="flex row flex-start item-star">
+            <template wx:for="{{[1,1,1,1,0.5]}}" is='stars' data="{{item}}"></template>
+            <view>9分</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</template>
